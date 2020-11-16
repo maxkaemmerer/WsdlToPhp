@@ -212,8 +212,9 @@ class PackageNameWsdlClass extends stdClass implements ArrayAccess,Iterator,Coun
      * @param string $_className optional (used by inherited classes in order to always call this method)
      * @return PackageNameWsdlClass|null
      */
-    public static function __set_state(array $_array,$_className = __CLASS__)
+    public static function __set_state(array $_array)
     {
+        $_className = self::class;
         if(class_exists($_className))
         {
             $object = @new $_className();

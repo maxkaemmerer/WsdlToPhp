@@ -354,9 +354,9 @@ class WsdlToPhpStruct extends WsdlToPhpModel
                 /**
                  * __set_state method body
                  */
-                array_push($_body,'public static function __set_state(array $_array,$_className = __CLASS__)');
+                array_push($_body,'public static function __set_state(array $_array)');
                 array_push($_body,'{');
-                array_push($_body,'return parent::__set_state($_array,$_className);');
+                array_push($_body,'return parent::__set_state($_array);');
                 array_push($_body,'}');
             }
         }
